@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Go server with an Nginx proxy and a MariaDB/MySQL database
 
+This example demonstrates a multi-service application with an NGINX proxy, a Go backend, and a MySQL database. The NGINX service acts as a reverse proxy, forwarding requests to the Go backend service, which in turn connects to the MySQL database.
+
 Project structure:
 ```
 .
@@ -23,6 +25,12 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `proxy`, `backend`, and `db` services.
+*   `backend/Dockerfile`: The Dockerfile for the Go backend service.
+*   `backend/main.go`: The source code for the Go backend service.
+*   `db/password.txt`: The password for the MySQL database.
+*   `proxy/nginx.conf`: The NGINX configuration file, which configures the reverse proxy.
 
 [_compose.yaml_](compose.yaml)
 ```yaml

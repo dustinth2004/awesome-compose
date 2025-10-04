@@ -1,11 +1,21 @@
 ## Compose sample application
 ### Elasticsearch, Logstash, and Kibana (ELK) in single-node
 
+This example demonstrates how to set up the ELK stack (Elasticsearch, Logstash, and Kibana) using Docker Compose.
+
 Project structure:
 ```
 .
-└── compose.yaml
+├── compose.yaml
+├── logstash
+│   ├── nginx.log
+│   └── pipeline
+│       └── logstash-nginx.config
+└── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `elasticsearch`, `logstash`, and `kibana` services.
+*   `logstash/`: Contains the Logstash configuration and a sample log file.
 
 [_compose.yaml_](compose.yaml)
 ```

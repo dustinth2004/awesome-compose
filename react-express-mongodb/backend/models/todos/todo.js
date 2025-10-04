@@ -1,5 +1,6 @@
 /**
- * Created by Syed Afzal
+ * @fileoverview This file defines the Mongoose model for a Todo.
+ * @author Syed Afzal
  */
 const mongoose = require('mongoose');
 

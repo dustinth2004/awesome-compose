@@ -4,6 +4,7 @@ use deadpool_postgres::Pool;
 mod postgres;
 mod user;
 
+/// Lists all users in the database.
 #[get("/users")]
 async fn list_users(pool: web::Data<Pool>) -> HttpResponse {
     let client = match pool.get().await {
@@ -22,10 +23,12 @@ async fn list_users(pool: web::Data<Pool>) -> HttpResponse {
     }
 }
 
+/// Returns the address to bind the server to.
 fn address() -> String {
     std::env::var("ADDRESS").unwrap_or_else(|_| "127.0.0.1:8000".into())
 }
 
+/// The main entry point for the application.
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     env_logger::init();

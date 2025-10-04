@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Python/Flask application
 
+This is a simple "Hello World" application using the Flask framework. The purpose of this sample is to demonstrate how to create a containerized Flask application using Docker Compose.
+
 Project structure:
 ```
 .
@@ -16,8 +18,12 @@ Project structure:
     ├── Dockerfile
     ├── requirements.txt
     └── app.py
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the services, networks, and volumes for the application.
+*   `app/Dockerfile`: The Dockerfile for the Flask application. It installs the dependencies and runs the application.
+*   `app/requirements.txt`: The Python dependencies for the Flask application.
+*   `app/app.py`: The main Flask application file. It contains a single route that returns "Hello World!".
 
 [_compose.yaml_](compose.yaml)
 ```

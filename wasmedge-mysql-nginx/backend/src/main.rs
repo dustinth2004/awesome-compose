@@ -8,6 +8,7 @@ use std::result::Result;
 use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
 
+/// Gets the database URL from the environment variables.
 fn get_url() -> String {
     if let Ok(url) = std::env::var("DATABASE_URL") {
         let opts = Opts::from_url(&url).expect("DATABASE_URL invalid");
@@ -24,6 +25,7 @@ fn get_url() -> String {
     }
 }
 
+/// Represents an order.
 #[derive(Serialize, Deserialize, Debug)]
 struct Order {
     order_id: i32,
@@ -36,6 +38,7 @@ struct Order {
 }
 
 impl Order {
+    /// Creates a new order.
     fn new(
         order_id: i32,
         product_id: i32,
@@ -57,6 +60,7 @@ impl Order {
     }
 }
 
+/// Handles the incoming HTTP requests.
 async fn handle_request(req: Request<Body>, pool: Pool) -> Result<Response<Body>, anyhow::Error> {
     match (req.method(), req.uri().path()) {
         (&Method::GET, "/") => Ok(Response::new(Body::from(
@@ -200,7 +204,7 @@ async fn handle_request(req: Request<Body>, pool: Pool) -> Result<Response<Body>
     }
 }
 
-// CORS headers
+/// Builds a response with CORS headers.
 fn response_build(body: &str) -> Response<Body> {
     Response::builder()
         .header("Access-Control-Allow-Origin", "*")
@@ -210,6 +214,7 @@ fn response_build(body: &str) -> Response<Body> {
         .unwrap()
 }
 
+/// The main entry point for the application.
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let opts = Opts::from_url(&*get_url()).unwrap();

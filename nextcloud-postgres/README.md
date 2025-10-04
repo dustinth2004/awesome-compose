@@ -1,8 +1,6 @@
 ## Nextcloud with Postgres database
-This example defines one of the base setups for Nextcloud. More details on how to
-further customize the installation and the compose file can be found on the
-[official image page](https://hub.docker.com/_/nextcloud).
 
+This example demonstrates how to set up Nextcloud with a PostgreSQL database using Docker Compose. Nextcloud is a suite of client-server software for creating and using file hosting services.
 
 Project structure:
 ```
@@ -10,6 +8,8 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `nc` and `db` services.
 
 [_compose.yaml_](compose.yaml)
 ```

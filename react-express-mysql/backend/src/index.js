@@ -1,3 +1,7 @@
+/**
+ * @fileoverview This is the entry point for the backend application.
+ * It starts the server and handles graceful shutdown.
+ */
 const app = require("./server");
 const { port } = require("./config");
 
@@ -33,7 +37,9 @@ process.on("SIGTERM", function onSigterm() {
   shutdown();
 });
 
-// shut down server
+/**
+ * Shuts down the server gracefully.
+ */
 function shutdown() {
   server.close(function onServerClosed(err) {
     if (err) {

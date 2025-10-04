@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### TRAEFIK proxy with GO backend
 
+This example demonstrates how to use Traefik as a reverse proxy for a Go backend. Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
+
 Project structure:
 ```
 .
@@ -17,6 +19,10 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `frontend` (Traefik) and `backend` services.
+*   `backend/Dockerfile`: The Dockerfile for the Go backend service.
+*   `backend/main.go`: The source code for the Go backend service.
 
 [_compose.yaml_](compose.yaml)
 ```

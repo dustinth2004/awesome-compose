@@ -7,6 +7,7 @@ const SCRIPTS_UP: [(&str, &str); 1] = [(
     include_str!("../migrations/0001_create-users_up.sql"),
 )];
 
+/// Creates a new postgres-deadpool config.
 fn create_config() -> Config {
     let mut cfg = Config::new();
     if let Ok(host) = std::env::var("PG_HOST") {
@@ -24,12 +25,14 @@ fn create_config() -> Config {
     cfg
 }
 
+/// Creates a new postgres-deadpool.
 pub fn create_pool() -> Pool {
     create_config()
         .create_pool(NoTls)
         .expect("couldn't create postgres pool")
 }
 
+/// Runs the migrations.
 pub async fn migrate_up(pool: &Pool) {
     let mut client = pool.get().await.expect("couldn't get postgres client");
     let migration = Migration::new("migrations".to_string());

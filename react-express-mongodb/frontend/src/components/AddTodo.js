@@ -1,6 +1,14 @@
 import React from "react";
 
+/**
+ * A component that provides a form to add a new todo.
+ * @extends React.Component
+ */
 export default class AddTodo extends React.Component {
+  /**
+   * Handles the form submission.
+   * @param {object} e - The form submission event.
+   */
   handleSubmit = (e) => {
     e.preventDefault();
     const { value } = e.target.elements.value;

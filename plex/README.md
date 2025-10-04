@@ -1,8 +1,6 @@
 ## Plex
-This example provides a base setup for using [Plex](https://www.plex.tv/).
-More details on how to customize the installation and the compose file can be found in [linuxserver documentation](https://github.com/linuxserver/docker-plex).
-Alternatively, you can use different plex images (e.g. official plex image by [plexinc](https://github.com/plexinc/pms-docker))
 
+This example demonstrates how to set up a Plex media server using Docker Compose.
 
 Project structure:
 ```
@@ -11,6 +9,9 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `.env`: The environment file for the Plex service.
+*   `compose.yaml`: The Docker Compose file that defines the `plex` service.
 
 [_compose.yaml_](compose.yaml)
 ``` yaml

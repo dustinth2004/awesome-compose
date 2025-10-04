@@ -1,8 +1,15 @@
+/**
+ * @fileoverview This file contains the route definitions for the application.
+ */
 const express = require("express");
 const serverResponses = require("../utils/helpers/responses");
 const messages = require("../config/messages");
 const { Todo } = require("../models/todos/todo");
 
+/**
+ * Sets up the routes for the application.
+ * @param {object} app - The Express application object.
+ */
 const routes = (app) => {
   const router = express.Router();
 

@@ -8,16 +8,23 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Python/FastAPI application
 
+This is a simple "Hello World" application using the FastAPI framework. The purpose of this sample is to demonstrate how to create a containerized FastAPI application using Docker Compose.
+
 Project structure:
 ```
+.
 ├── compose.yaml
 ├── Dockerfile
 ├── requirements.txt
 ├── app
     ├── main.py
     ├── __init__.py
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `api` service.
+*   `Dockerfile`: The Dockerfile for the FastAPI application.
+*   `requirements.txt`: The Python dependencies for the FastAPI application.
+*   `app/main.py`: The main FastAPI application file.
 
 [_compose.yaml_](compose.yaml)
 ```

@@ -1,6 +1,6 @@
 ## PostgreSQL and pgAdmin
-This example provides a base setup for using [PostgreSQL](https://www.postgresql.org/) and [pgAdmin](https://www.pgadmin.org/).
-More details on how to customize the installation and the compose file can be found [here (PostgreSQL)](https://hub.docker.com/_/postgres) and [here (pgAdmin)](https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html).
+
+This example demonstrates how to set up PostgreSQL with pgAdmin using Docker Compose. pgAdmin is a web-based GUI tool for managing PostgreSQL databases.
 
 Project structure:
 ```
@@ -9,6 +9,9 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `.env`: The environment file for the PostgreSQL and pgAdmin services.
+*   `compose.yaml`: The Docker Compose file that defines the `postgres` and `pgadmin` services.
 
 [_compose.yaml_](compose.yaml)
 ``` yaml

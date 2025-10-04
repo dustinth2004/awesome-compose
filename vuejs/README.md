@@ -6,7 +6,9 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 [Open in Docker Dev Environments <img src="../open_in_new.svg" alt="Open in Docker Dev Environments" align="top"/>](https://open.docker.com/dashboard/dev-envs?url=https://github.com/docker/awesome-compose/tree/master/vuejs)
 
-### VueJS 
+### VueJS
+
+This example demonstrates how to create a containerized Vue.js application using Docker Compose.
 
 Project structure:
 ```
@@ -15,8 +17,15 @@ Project structure:
 ├── README.md
 └── vuejs
     ├── Dockerfile
+    ├── src
+    │   ├── App.vue
+    │   └── ...
     └── ...
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web` service.
+*   `vuejs/Dockerfile`: The Dockerfile for the Vue.js application.
+*   `vuejs/src/`: The source code of the Vue.js application.
 
 [_compose.yaml_](compose.yaml)
 ```

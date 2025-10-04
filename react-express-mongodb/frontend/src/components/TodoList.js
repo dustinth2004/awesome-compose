@@ -1,6 +1,14 @@
 import React from "react";
 
+/**
+ * A component that displays a list of todos.
+ * @extends React.Component
+ */
 export default class TodoList extends React.Component {
+  /**
+   * Creates an instance of TodoList.
+   * @param {object} props - The props for the component.
+   */
   constructor(props) {
     super(props);
 
@@ -9,12 +17,21 @@ export default class TodoList extends React.Component {
     };
   }
 
+  /**
+   * Sets the active todo item.
+   * @param {number} index - The index of the todo item to set as active.
+   */
   handleActive(index) {
     this.setState({
       activeIndex: index,
     });
   }
 
+  /**
+   * Renders a list of todos.
+   * @param {Array<object>} todos - The list of todos to render.
+   * @returns {JSX.Element} The rendered list of todos.
+   */
   renderTodos(todos) {
     return (
       <ul className="list-group">
@@ -36,6 +53,11 @@ export default class TodoList extends React.Component {
     );
   }
 
+  /**
+   * Renders the component.
+   *
+   * @returns {JSX.Element} The rendered component.
+   */
   render() {
     let { todos } = this.props;
     return todos.length > 0 ? (

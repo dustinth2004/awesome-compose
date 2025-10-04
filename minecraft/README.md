@@ -1,5 +1,6 @@
 ## Minecraft server
-This example defines a basic setup for a Minecraft server. More details on the Minecraft server docker image can be found [here](https://github.com/itzg/docker-minecraft-server/blob/master/README.md).
+
+This example demonstrates how to set up a Minecraft server using Docker Compose.
 
 Project structure:
 ```
@@ -7,6 +8,8 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `minecraft` service.
 
 [_compose.yaml_](compose.yaml)
 ```

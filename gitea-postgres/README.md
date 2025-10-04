@@ -1,6 +1,6 @@
 ## Gitea with PostgreSQL
-This example defines one of the base setups for Gitea. More details on how to customize the installation and the compose file can be found in [Gitea documentation](https://docs.gitea.io/en-us/install-with-docker/).
 
+This example demonstrates how to set up Gitea with a PostgreSQL database using Docker Compose. Gitea is a lightweight and self-hosted Git service.
 
 Project structure:
 ```
@@ -8,6 +8,8 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `gitea` and `db` services.
 
 [_compose.yaml_](compose.yaml)
 ```

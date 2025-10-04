@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Spark Java
 
+This example demonstrates how to create a containerized Spark Java application using Docker Compose.
+
 Project structure:
 ```
 .
@@ -15,8 +17,16 @@ Project structure:
 ├── README.md
 └── sparkjava
     ├── Dockerfile
+    ├── src
+    │   └── main
+    │       └── java
+    │           └── App.java
     └── ...
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `sparkjava` service.
+*   `sparkjava/Dockerfile`: The Dockerfile for the Spark Java application.
+*   `sparkjava/src/`: The source code of the Spark Java application.
 
 [_compose.yaml_](compose.yaml)
 ```

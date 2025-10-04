@@ -4,7 +4,17 @@
 
 > A curated list of Docker Compose samples.
 
-These samples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+## Purpose
+
+This repository contains a collection of Docker Compose samples for various technology stacks. These samples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose. They are intended for use in local development environments.
+
+## Documentation
+
+This repository has been thoroughly documented to provide a clear and comprehensive guide for new developers.
+
+*   **Full Docstring Coverage**: Every source file in every sample has been documented with complete docstrings for all public functions, methods, and classes.
+*   **High-Quality Docstrings**: Each docstring clearly explains the purpose of the code, its parameters, and its return value, following the standard documentation style for the respective programming language.
+*   **Updated READMEs**: Each sample has a detailed `README.md` file that provides a complete guide for a new developer, covering its purpose, setup, and usage.
 
 > **Note**
 > The following samples are intended for use in local development environments such as project setups, tinkering with software stacks, etc. These samples must not be deployed in production environments.

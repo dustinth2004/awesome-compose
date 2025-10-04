@@ -8,6 +8,9 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+/**
+ * The main application component.
+ */
 export default {
   name: 'App',
   components: {

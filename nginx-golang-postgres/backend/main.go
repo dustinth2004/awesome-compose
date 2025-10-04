@@ -15,6 +15,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// connect establishes a connection to the PostgreSQL database.
 func connect() (*sql.DB, error) {
 	bin, err := ioutil.ReadFile("/run/secrets/db-password")
 	if err != nil {
@@ -23,6 +24,8 @@ func connect() (*sql.DB, error) {
 	return sql.Open("postgres", fmt.Sprintf("postgres://postgres:%s@db:5432/example?sslmode=disable", string(bin)))
 }
 
+// blogHandler handles the HTTP request to the root path.
+// It fetches the blog titles from the database and returns them as a JSON response.
 func blogHandler(w http.ResponseWriter, r *http.Request) {
 	db, err := connect()
 	if err != nil {
@@ -45,6 +48,8 @@ func blogHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(titles)
 }
 
+// main is the entry point of the application.
+// It prepares the database and starts the HTTP server.
 func main() {
 	log.Print("Prepare db...")
 	if err := prepare(); err != nil {
@@ -57,6 +62,9 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8000", handlers.LoggingHandler(os.Stdout, r)))
 }
 
+// prepare prepares the database for the application.
+// It waits for the database to be ready, drops the existing blog table,
+// creates a new blog table, and inserts some sample data.
 func prepare() error {
 	db, err := connect()
 	if err != nil {

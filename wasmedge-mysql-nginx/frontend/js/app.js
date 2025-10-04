@@ -16,6 +16,9 @@
   const shippingField = document.getElementById("shippingAmount");
   const shippingAddressField = document.getElementById("shippingAddress");
 
+  /**
+   * Fetches the orders from the backend.
+   */
   function fetchOrders() {
     fetch("http://localhost:8080/orders")
       .then(r => r.json())
@@ -26,12 +29,18 @@
       });
   }
 
+  /**
+   * Initializes the database.
+   */
   function init() {
     fetch("http://localhost:8080/init")
       .then(() => fetchOrders())
       .catch((e) => displayError(e));
   }
 
+  /**
+   * Renders the orders in the table.
+   */
   function renderOrders() {
     appLoadingEle.classList.add("d-none");
     orderWrapperEle.classList.remove("d-none");
@@ -82,21 +91,38 @@
     });
   }
 
+  /**
+   * Creates a table cell with the given contents.
+   * @param {string} contents - The contents of the cell.
+   * @returns {HTMLTableCellElement} The table cell element.
+   */
   function createCell(contents) {
     const cell = document.createElement("td");
     cell.innerText = contents;
     return cell;
   }
 
+  /**
+   * Deletes an order.
+   * @param {number} orderId - The ID of the order to delete.
+   */
   function deleteOrder(orderId) {
     fetch(`http://localhost:8080/delete_order?id=${orderId}`)
       .then(() => fetchOrders());
   }
 
+  /**
+   * Displays an error message.
+   * @param {Error} err - The error to display.
+   */
   function displayError(err) {
     alert("Error:" + err);
   }
 
+  /**
+   * Handles the form submission for adding a new order.
+   * @param {Event} e - The form submission event.
+   */
   function onAddFormSubmit(e) {
     e.preventDefault();
 
@@ -120,6 +146,9 @@
     alert("Order added");
   }
 
+  /**
+   * Resets the add order form.
+   */
   function resetAddOrderForm() {
     orderIdField.value = "";
     productIdField.value = "";

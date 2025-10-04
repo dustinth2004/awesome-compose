@@ -1,6 +1,6 @@
 ## Portainer (CE)
-This example provides a base setup for using [Portainer](https://www.portainer.io/).
-More details on how to customize the installation and the compose file can be found in [portainer documentation](https://documentation.portainer.io/).
+
+This example demonstrates how to set up Portainer using Docker Compose. Portainer is a lightweight management UI which allows you to easily manage your different Docker environments.
 
 ### Demo
 You can try out the public demo instance first: http://demo.portainer.io/
@@ -13,6 +13,8 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `portainer` service.
 
 [_compose.yaml_](compose.yaml)
 ``` yaml

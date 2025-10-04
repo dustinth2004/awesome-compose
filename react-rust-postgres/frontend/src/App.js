@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+/**
+ * The main application component.
+ * It fetches a list of users from the backend and displays a message.
+ *
+ * @returns {JSX.Element} The rendered application.
+ */
 function App() {
   const [message, setMessage] = useState();
   useEffect(() => {

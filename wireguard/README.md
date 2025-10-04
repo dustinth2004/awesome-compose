@@ -1,6 +1,6 @@
 ## Wireguard
-This example provides a base setup for using [Wireguard](https://www.wireguard.com/).
-More details on how to customize the installation and the compose file can be found in [linuxserver documentation](https://hub.docker.com/r/linuxserver/wireguard).
+
+This example demonstrates how to set up a WireGuard VPN server using Docker Compose.
 
 Project structure:
 ```
@@ -9,6 +9,9 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `.env`: The environment file for the WireGuard service.
+*   `compose.yaml`: The Docker Compose file that defines the `wireguard` service.
 
 [_compose.yaml_](compose.yaml)
 ``` yaml

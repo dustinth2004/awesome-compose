@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
+/**
+ * The main application component.
+ *
+ * @returns {JSX.Element} The rendered application.
+ */
 function App() {
   return (
     <div className="App">

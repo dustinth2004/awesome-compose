@@ -1,3 +1,6 @@
+/**
+ * @fileoverview This file sets up the Express server and defines the API routes.
+ */
 // simple node web server that displays hello world
 // optimized for Docker image
 
@@ -19,6 +22,7 @@ const app = express();
 
 app.use(morgan("common"));
 
+// A route that returns a message with the MySQL version.
 app.get("/", function(req, res, next) {
   database.raw('select VERSION() version')
     .then(([rows, columns]) => rows[0])
@@ -26,6 +30,7 @@ app.get("/", function(req, res, next) {
     .catch(next);
 });
 
+// A health check endpoint.
 app.get("/healthz", function(req, res) {
   // do app logic here to determine if app is truly healthy
   // you should return 200 if healthy, and anything else will fail

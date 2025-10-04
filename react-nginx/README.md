@@ -6,11 +6,14 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 [Open in Docker Dev Environments <img src="../open_in_new.svg" alt="Open in Docker Dev Environments" align="top"/>](https://open.docker.com/dashboard/dev-envs?url=https://github.com/docker/awesome-compose/tree/master/react-nginx)
 
-### An project deploy React Application with Nginx
+### React Application with Nginx
+
+This example demonstrates how to serve a React application using an Nginx web server, all within a Docker container.
 
 Project structure:
 
 ```
+.
 ├── compose.yaml
 ├── Dockerfile
 ├── .dockerignore
@@ -25,8 +28,15 @@ Project structure:
 │   ├── ...
 │   └── App.js
 └── yarn.lock
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `frontend` service.
+*   `Dockerfile`: A multi-stage Dockerfile that first builds the React application and then serves it using Nginx.
+*   `.dockerignore`: Specifies which files and directories to ignore when building the Docker image.
+*   `.nginx/nginx.conf`: The Nginx configuration file.
+*   `package.json`: Defines the project's dependencies and scripts.
+*   `public/`: Contains the public assets of the React application.
+*   `src/`: Contains the source code of the React application.
 
 [_compose.yaml_](compose.yaml)
 

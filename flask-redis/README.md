@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Python/Flask application using a Redis database
 
+This example demonstrates a simple Python/Flask application that uses a Redis database to store a counter.
+
 Project structure:
 
 ```
@@ -18,6 +20,11 @@ Project structure:
 ├── compose.yaml
 └── requirements.txt
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web` and `redis` services.
+*   `Dockerfile`: The Dockerfile for the Flask application.
+*   `app.py`: The main application file, which contains the Flask application and the Redis logic.
+*   `requirements.txt`: The Python dependencies for the application.
 
 [_compose.yaml_](compose.yaml)
 

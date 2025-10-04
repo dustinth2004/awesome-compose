@@ -6,6 +6,13 @@ redis = Redis(host='redis', port=6379)
 
 @app.route('/')
 def hello():
+    """
+    A simple Flask route that increments a Redis counter and returns a message
+    displaying the number of times the page has been viewed.
+
+    Returns:
+        A string with the number of page views.
+    """
     redis.incr('hits')
     counter = str(redis.get('hits'),'utf-8')
     return "This webpage has been viewed "+counter+" time(s)"
