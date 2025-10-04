@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Python/Flask application with Nginx proxy and a Mongo database
 
+This example demonstrates a multi-service application with an NGINX proxy, a Flask backend, and a MongoDB database. The NGINX service acts as a reverse proxy, forwarding requests to the Flask backend service, which in turn connects to the MongoDB database.
+
 Project structure:
 ```
 .
@@ -18,8 +20,13 @@ Project structure:
 │   └── server.py
 └── nginx
     └── nginx.conf
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web`, `backend`, and `mongo` services.
+*   `flask/Dockerfile`: The Dockerfile for the Flask backend service.
+*   `flask/requirements.txt`: The Python dependencies for the Flask application.
+*   `flask/server.py`: The source code for the Flask backend service.
+*   `nginx/nginx.conf`: The NGINX configuration file, which configures the reverse proxy.
 
 [_compose.yaml_](compose.yaml)
 ```

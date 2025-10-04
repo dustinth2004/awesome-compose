@@ -8,18 +8,32 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Java application with Spring framework and a Postgres database
 
+This example demonstrates a multi-service application with a Spring Boot backend and a PostgreSQL database.
+
 Project structure:
 ```
 .
 ├── backend
 │   ├── Dockerfile
+│   ├── src
+│   │   └── main
+│   │       └── java
+│   │           └── com
+│   │               └── company
+│   │                   └── project
+│   │                       ├── Application.java
+│   │                       └── ...
 │   └── ...
 ├── db
 │   └── password.txt
 ├── compose.yaml
 └── README.md
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `backend` and `db` services.
+*   `backend/Dockerfile`: The Dockerfile for the Spring Boot backend service.
+*   `backend/src/`: The source code of the Spring Boot application.
+*   `db/password.txt`: The password for the PostgreSQL database.
 
 [_compose.yaml_](compose.yaml)
 ```

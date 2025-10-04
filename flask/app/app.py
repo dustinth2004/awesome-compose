@@ -3,6 +3,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+	"""A simple Flask route that returns a 'Hello World!' string.
+
+	Returns:
+		A string 'Hello World!'.
+	"""
 	return "Hello World!"
 
 if __name__ == '__main__':

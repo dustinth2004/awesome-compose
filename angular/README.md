@@ -8,16 +8,28 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Angular service
 
+This example demonstrates how to create a containerized Angular application using Docker Compose.
+
 Project structure:
 ```
 .
 ├── angular
 │   ├── Dockerfile
-│   ├── ...
-│   ├── ...
-│   ....
+│   ├── src
+│   │   ├── app
+│   │   │   ├── app.component.ts
+│   │   │   └── ...
+│   │   ├── main.ts
+│   │   └── ...
+│   ├── angular.json
+│   └── ...
 └── compose.yaml
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web` service.
+*   `angular/Dockerfile`: The Dockerfile for the Angular application.
+*   `angular/src/`: The source code of the Angular application.
+*   `angular/angular.json`: The Angular CLI configuration file.
 
 [_compose.yaml_](compose.yaml)
 ```

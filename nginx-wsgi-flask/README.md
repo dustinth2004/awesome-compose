@@ -1,5 +1,7 @@
 # Compose Sample Application
 
+This example demonstrates a multi-service application with an NGINX proxy, a WSGI server (Gunicorn), and a Flask backend. This is a common and robust setup for deploying Python web applications.
+
 ## NGINX Reverse Proxy -> WSGI -> Python/Flask Backend
 
 Project structure:

@@ -1,8 +1,13 @@
 /**
- * Created by Syed Afzal
+ * @fileoverview This file contains the database connection logic.
+ * @author Syed Afzal
  */
 const mongoose = require("mongoose");
 
+/**
+ * Connects to the MongoDB database.
+ * @param {object} app - The Express application object.
+ */
 exports.connect = (app) => {
   const options = {
     useNewUrlParser: true,

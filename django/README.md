@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Django application in dev mode
 
+This is a basic Django application that demonstrates how to set up a containerized Django development environment. The project is based on the default `django-admin startproject` template.
+
 Project structure:
 ```
 .
@@ -16,8 +18,13 @@ Project structure:
     ├── Dockerfile
     ├── requirements.txt
     └── manage.py
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the services, networks, and volumes for the application.
+*   `app/Dockerfile`: The Dockerfile for the Django application. It installs the dependencies and runs the development server.
+*   `app/requirements.txt`: The Python dependencies for the Django application.
+*   `app/manage.py`: The Django command-line utility for administrative tasks.
+*   `app/example/`: The directory containing the Django project's settings, URLs, and other configurations.
 
 [_compose.yaml_](compose.yaml)
 ```

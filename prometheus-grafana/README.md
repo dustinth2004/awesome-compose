@@ -1,7 +1,8 @@
-## Compose sample
-### Prometheus & Grafana
+## Prometheus & Grafana
 
-Project structure:
+This example demonstrates how to set up Prometheus and Grafana using Docker Compose. Prometheus is a monitoring system and time series database, and Grafana is a visualization and analytics software.
+
+### Project structure:
 ```
 .
 ├── compose.yaml
@@ -11,6 +12,10 @@ Project structure:
 │   └── prometheus.yml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `prometheus` and `grafana` services.
+*   `grafana/datasource.yml`: The Grafana datasource configuration.
+*   `prometheus/prometheus.yml`: The Prometheus configuration.
 
 [_compose.yaml_](compose.yaml)
 ```

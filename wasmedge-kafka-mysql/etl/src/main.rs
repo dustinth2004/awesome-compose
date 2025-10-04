@@ -1,6 +1,7 @@
 use mega_etl::{async_trait, Pipe, Transformer, TransformerError, TransformerResult};
 
 use serde::{Deserialize, Serialize};
+/// Represents an order.
 #[derive(Serialize, Deserialize, Debug)]
 struct Order {
     order_id: i32,
@@ -14,6 +15,7 @@ struct Order {
 
 #[async_trait]
 impl Transformer for Order {
+    /// Transforms the inbound data into a SQL INSERT statement.
     async fn transform(inbound_data: &Vec<u8>) -> TransformerResult<Vec<String>> {
         let s = std::str::from_utf8(&inbound_data)
             .map_err(|e| TransformerError::Custom(e.to_string()))?;
@@ -36,6 +38,7 @@ impl Transformer for Order {
         Ok(ret)
     }
 
+    /// Returns the SQL statement to create the `orders` table.
     async fn init() -> TransformerResult<String> {
         Ok(String::from(
             r"CREATE TABLE IF NOT EXISTS orders (order_id INT, product_id INT, quantity INT, amount FLOAT, shipping FLOAT, tax FLOAT, shipping_address VARCHAR(50), date_registered TIMESTAMP DEFAULT CURRENT_TIMESTAMP);",
@@ -43,6 +46,7 @@ impl Transformer for Order {
     }
 }
 
+/// The main entry point for the application.
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
     env_logger::init();

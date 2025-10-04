@@ -8,18 +8,31 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### Python/Flask with Nginx proxy and MySQL database
 
+This example demonstrates a multi-service application with an NGINX proxy, a Flask backend, and a MySQL database. The NGINX service acts as a reverse proxy, forwarding requests to the Flask backend service, which in turn connects to the MySQL database.
+
 Project structure:
 ```
 .
-├── compose.yaml
-├── flask
+├── backend
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   └── server.py
-└── nginx
-    └── nginx.conf
-
+│   └── hello.py
+├── compose.yaml
+├── db
+│   └── password.txt
+├── proxy
+│   ├── Dockerfile
+│   └── conf
+└── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `proxy`, `backend`, and `db` services.
+*   `backend/Dockerfile`: The Dockerfile for the Flask backend service.
+*   `backend/requirements.txt`: The Python dependencies for the Flask application.
+*   `backend/hello.py`: The source code for the Flask backend service.
+*   `db/password.txt`: The password for the MySQL database.
+*   `proxy/Dockerfile`: The Dockerfile for the NGINX proxy service.
+*   `proxy/conf`: The NGINX configuration file.
 
 [_compose.yaml_](compose.yaml)
 ```

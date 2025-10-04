@@ -1,3 +1,6 @@
+/**
+ * @fileoverview This file sets up the database connection using knex.
+ */
 const knex = require('knex');
 const { database } = require('./config');
 

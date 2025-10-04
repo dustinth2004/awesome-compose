@@ -1,6 +1,6 @@
 ## Pi-hole with cloudflared DoH (DNS-Over-HTTPS)
-This example provides a base setup for using [Pi-hole](https://docs.pi-hole.net/) with the [cloudflared DoH](https://docs.pi-hole.net/guides/dns/cloudflared/) service.
-More details on how to customize the installation and the compose file can be found in [Docker Pi-hole documentation](https://github.com/pi-hole/docker-pi-hole).
+
+This example demonstrates how to set up Pi-hole with the cloudflared DNS-Over-HTTPS (DoH) service using Docker Compose.
 
 
 Project structure:

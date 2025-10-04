@@ -31,6 +31,10 @@
 </template>
 
 <script>
+/**
+ * A component that displays a welcome message.
+ * @property {string} msg - The message to display.
+ */
 export default {
   name: 'HelloWorld',
   props: {

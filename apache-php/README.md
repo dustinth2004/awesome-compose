@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### PHP application with Apache2
 
+This example demonstrates how to create a containerized PHP application with an Apache web server using Docker Compose.
+
 Project structure:
 ```
 .
@@ -15,8 +17,11 @@ Project structure:
 ├── app
     ├── Dockerfile
     └── index.php
-
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web` service.
+*   `app/Dockerfile`: The Dockerfile for the PHP application.
+*   `app/index.php`: The main PHP application file.
 
 [_compose.yaml_](compose.yaml)
 ```

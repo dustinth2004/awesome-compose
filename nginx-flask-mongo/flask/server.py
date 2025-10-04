@@ -10,6 +10,12 @@ client = MongoClient("mongo:27017")
 
 @app.route('/')
 def todo():
+    """
+    A simple Flask route that checks the connection to the MongoDB server.
+
+    Returns:
+        A string indicating the status of the MongoDB server connection.
+    """
     try:
         client.admin.command('ismaster')
     except:

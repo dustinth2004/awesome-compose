@@ -1,5 +1,7 @@
 /**
- * Created by Syed Afzal
+ * @fileoverview This is the main server file for the backend application.
+ * It sets up the Express server, connects to the database, and configures the routes.
+ * @author Syed Afzal
  */
 require("./config/config");
 

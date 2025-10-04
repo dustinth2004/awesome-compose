@@ -8,18 +8,29 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### React application with a Rust backend and a Postgresql database
 
+This example demonstrates a full-stack application with a React frontend, a Rust backend, and a PostgreSQL database.
+
 Project structure:
 ```
 .
 ├── backend
 │   ├── Dockerfile
-│   ...
+│   ├── src
+│   │   ├── main.rs
+│   │   └── ...
+│   └── ...
 ├── compose.yaml
 ├── frontend
-│   ├── ...
-│   └── Dockerfile
+│   ├── Dockerfile
+│   ├── src
+│   │   └── App.js
+│   └── ...
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `frontend`, `backend`, and `db` services.
+*   `backend/`: Contains the source code for the Rust backend.
+*   `frontend/`: Contains the source code for the React frontend.
 
 [_compose.yaml_](compose.yaml)
 ```

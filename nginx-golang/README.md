@@ -8,6 +8,8 @@ You can open this sample in the Dev Environments feature of Docker Desktop versi
 
 ### NGINX proxy with Go backend
 
+This example demonstrates a multi-service application with an NGINX proxy and a Go backend. The NGINX service acts as a reverse proxy, forwarding requests to the Go backend service.
+
 Project structure:
 ```
 .
@@ -19,6 +21,11 @@ Project structure:
 │   └── nginx.conf
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `proxy` and `backend` services.
+*   `backend/Dockerfile`: The Dockerfile for the Go backend service.
+*   `backend/main.go`: The source code for the Go backend service.
+*   `proxy/nginx.conf`: The NGINX configuration file, which configures the reverse proxy.
 
 [`compose.yaml`](compose.yaml)
 ```

@@ -1,16 +1,23 @@
 ## Compose sample application: ASP.NET with MS SQL server database
 
+This example demonstrates a multi-service application with an ASP.NET Core backend and a Microsoft SQL Server database.
+
 Project structure:
 ```
 .
 ├── app
 │   ├── aspnetapp
-│   │   ├── appsettings.Development.json
-|   |   └── ...
-│   ├── ...
+│   │   ├── Controllers
+│   │   │   └── HomeController.cs
+│   │   ├── ...
+│   │   └── Program.cs
 │   └── Dockerfile
 └── compose.yaml
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `web` and `db` services.
+*   `app/aspnetapp/`: The source code of the ASP.NET Core application.
+*   `app/Dockerfile`: The Dockerfile for the ASP.NET Core application.
 
 [_compose.yaml_](compose.yaml)
 ```

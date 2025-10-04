@@ -1,6 +1,6 @@
 ## WordPress with MySQL
-This example defines one of the basic setups for WordPress. More details on how this works can be found on the official [WordPress image page](https://hub.docker.com/_/wordpress).
 
+This example demonstrates how to set up WordPress with a MySQL database using Docker Compose.
 
 Project structure:
 ```
@@ -8,6 +8,8 @@ Project structure:
 ├── compose.yaml
 └── README.md
 ```
+
+*   `compose.yaml`: The Docker Compose file that defines the `db` and `wordpress` services.
 
 [_compose.yaml_](compose.yaml)
 ```
